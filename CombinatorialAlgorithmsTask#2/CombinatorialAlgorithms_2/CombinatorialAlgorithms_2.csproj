@@ -7,8 +7,8 @@
     <ProjectGuid>{EBF4BCDF-7614-40F4-BC8A-DC5BE3AB3545}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ка_2</RootNamespace>
-    <AssemblyName>ка№2</AssemblyName>
+    <RootNamespace>CombinatorialAlgorithms_2</RootNamespace>
+    <AssemblyName>CombinatorialAlgorithms#2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

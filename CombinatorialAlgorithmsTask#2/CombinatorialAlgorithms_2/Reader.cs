@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
-namespace ка_2
+namespace CombinatorialAlgorithms_2
 {
     public class Reader
     {
-        private static Dictionary<string, int> dict = new Dictionary<string,int>() {
+        private static readonly Dictionary<string, int> dict = new Dictionary<string, int>
+        {
             {"a", 0},
             {"b", 1},
             {"c", 2},
@@ -19,18 +17,26 @@ namespace ка_2
             {"g", 6},
             {"h", 7}
         };
-        private Tuple<int, int> pawn;
+
         private Tuple<int, int> hourse;
-        //public int[,] graph = new int[8,8];
-        public Tuple<int, int> ReturnCoodrHorse { get {return hourse; }}
-        public Tuple<int, int> ReturnCoodrPawn { get { return pawn; } }
+        private Tuple<int, int> pawn;
+
+        public Tuple<int, int> ReturnCoodrHorse
+        {
+            get { return hourse; }
+        }
+
+        public Tuple<int, int> ReturnCoodrPawn
+        {
+            get { return pawn; }
+        }
+
         public int[,] Read()
         {
-            int[,] graph = new int[8,8];
-            for (var i = 0; i < graph.GetLength(0); i++)
-                for (var j = 0; j < graph.GetLength(1); j++)
+            var graph = new int[8, 8];
+            for (int i = 0; i < graph.GetLength(0); i++)
+                for (int j = 0; j < graph.GetLength(1); j++)
                     graph[i, j] = 0;
-                
             string[] readMap = File.ReadAllLines("in.txt");
             int coordXHorse = dict[readMap[0][0].ToString()];
             int coordYHorse = int.Parse(readMap[0][1].ToString()) - 1;
@@ -40,9 +46,9 @@ namespace ка_2
             pawn = new Tuple<int, int>(coordXPawn, coordYPawn);
             graph[coordXHorse, coordYHorse] = 1;
             graph[coordXPawn, coordYPawn] = 2;
-            if((coordXPawn - 1 >= 0) && (coordYPawn - 1 >= 0))
+            if ((coordXPawn - 1 >= 0) && (coordYPawn - 1 >= 0))
                 graph[coordXPawn - 1, coordYPawn - 1] = 3;
-            if((coordXPawn + 1  <= 7) && (coordYPawn - 1 >= 0))
+            if ((coordXPawn + 1 <= 7) && (coordYPawn - 1 >= 0))
                 graph[coordXPawn + 1, coordYPawn - 1] = 3;
             return graph;
         }

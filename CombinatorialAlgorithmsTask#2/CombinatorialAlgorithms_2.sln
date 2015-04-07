@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ка№2", "ка№2\ка№2.csproj", "{EBF4BCDF-7614-40F4-BC8A-DC5BE3AB3545}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinatorialAlgorithms_2", "CombinatorialAlgorithms_2\CombinatorialAlgorithms_2.csproj", "{EBF4BCDF-7614-40F4-BC8A-DC5BE3AB3545}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
